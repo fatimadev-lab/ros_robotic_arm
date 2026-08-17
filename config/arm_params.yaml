@@ -1,0 +1,20 @@
+# Link lengths (meters) and joint limits (radians) for a generic 6-DOF arm
+link_lengths: [0.1, 0.4, 0.3, 0.05, 0.05, 0.02]
+joint_limits:
+  lower: [-3.14, -1.57, -2.0, -3.14, -3.14, -3.14]
+  upper: [3.14, 1.57, 2.0, 3.14, 3.14, 3.14]
+
+# Optional DH parameters to drive `forward_kinematics` precisely
+# If omitted, the solver will fall back to using `link_lengths` for the per-link d offsets
+dh:
+  a: [0, 0, 0, 0, 0, 0]
+  alpha: [0, -1.5707963267948966, 0, -1.5707963267948966, 1.5707963267948966, -1.5707963267948966]
+  d: [0.1, 0, 0.4, 0.3, 0.05, 0.05]
+# Optional URDF selection: set root and end-effector links if your URDF has multiple chains
+urdf_root: ''
+urdf_ee: ''
+
+# Simple spherical obstacles for collision checking
+obstacles:
+  - {center: [0.3, 0.0, 0.2], radius: 0.12}
+  - {center: [0.1, 0.2, 0.15], radius: 0.08}

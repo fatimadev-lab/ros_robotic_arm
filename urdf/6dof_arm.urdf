@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot name="simple_6dof">
+  <!-- Minimal 6-DOF chain for simulation; adapt inertias and visuals for Gazebo -->
+  <link name="base_link"/>
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="link_1"/>
+  <joint name="joint_2" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="link_2"/>
+  <joint name="joint_3" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <origin xyz="0 0 0.4" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="link_3"/>
+  <joint name="joint_4" type="revolute">
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <link name="link_4"/>
+  <joint name="joint_5" type="revolute">
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="link_5"/>
+  <joint name="joint_6" type="revolute">
+    <parent link="link_5"/>
+    <child link="ee_link"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <link name="ee_link"/>
+</robot>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ros_robotic_arm</name>
+  <version>0.1.0</version>
+  <description>6-DOF robotic arm kinematics and planning demo (ROS2)</description>
+  <maintainer email="you@example.com">You</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+</package>

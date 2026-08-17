@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!-- Deprecated: use the ROS2 Python launch at launch/sim_launch.py -->
+<launch></launch>
